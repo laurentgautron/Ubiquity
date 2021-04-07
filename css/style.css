@@ -79,6 +79,7 @@
   body {
       color: var(--primary);
       background-color: #fff;
+      text-align: center;
   }
 
   a {
@@ -91,6 +92,21 @@
       margin-left: auto;
       margin-right: auto;
   }
+
+  ul.progress-bar {
+    display: flex;
+    width: 15rem;
+    height: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul.progress-bar li {
+  background-color: var(--primary);
+  background-size: 1rem 1rem;
+  margin-right: 1rem;
+  width: 1rem;
+}
 
   /*****  header  *****/
   .main-header .container {
@@ -122,9 +138,9 @@
 }
 
   .main-header ul {
-      display: flex;
-      font-size: 1.4rem;
-      font-family: montserra, sans-serif;
+    display: flex;
+    font-size: 1.4rem;
+    font-family: montserra, sans-serif;
   }
 
   .main-menu_item:not(:first-of-type) {
@@ -132,36 +148,37 @@
   }
 
   .main-header h2 span {
-      font-family: montserra, sans-serif;
-      font-size: 1.4rem;
-      font-weight: 400;
+    font-family: montserra, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
   }
 
   .main-menu_link {
-      display: block;
-      padding: 1em;
-      text-transform:uppercase;
-      color: var(--primary);
+    display: block;
+    padding: 1em;
+    text-transform:uppercase;
+    color: var(--primary);
   }
 
   .main-menu_link:hover {
-      color: #FFF;
-      background-color: var(--orange);
+    color: #FFF;
+    background-color: var(--orange);
   }
 
 
   /****** hero ******/
 
+  .hero {
+    background-image: url(../img/writing.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 8rem;
+  }
+  
   .hero .container {
       justify-content: space-around;
       align-items: center;
       height: 96rem;
-  }
-  
-  .hero {
-      background-image: url(../img/slider1.jpg);
-      background-size: cover;
-      background-position: center;
   }  
   
   .arrow-circle {
@@ -180,13 +197,11 @@
   }
 
   .hero-paragraphe {
-      height: 11.2rem;
       width: 105rem;
       font-family: montserra, sans-serif;
       font-size: 3.2rem;
       font-weight: 400;
       color: var(--primary);
-      margin-bottom: 23rem;
   }
 
   .hero-title {
@@ -197,10 +212,48 @@
       color: var(--orange);
   }
 
-  .hero .progress-bar {
-      background-color: var(--orange);
-      background-size: 1rem;
-      background-repeat: repeat-8;
-      height: 1rem;
-      width: 15rem;
-  }
+/******* services *******/
+
+.services .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.articles-container {
+    display: flex;
+}
+
+.services-title {
+    margin-bottom: 1.2rem;
+    font-family: raleway, sans-serif;
+    font-size: 4.8rem;
+    font-weight: 700;
+}
+
+.services-text {
+    width: 104.8rem;
+    margin-bottom: 4.9rem;
+}
+
+.services-img {
+    position: relative;
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 50%;
+    background-color: #EEE;
+    margin-bottom: 2.4rem;
+}
+
+.services-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.services-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 31.7rem;
+}
