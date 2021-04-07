@@ -73,7 +73,7 @@
   :root {
       --primary: #333;
       --grey: #707070;
-      --background: #F16822;
+      --orange: #F16822;
   }
 
   body {
@@ -109,7 +109,9 @@
   .logo {
       width: 7rem;
       height: 4.9rem;
-      background-image: url(../img/LOGO.svg);;
+      background-image: url(../img/LOGO.svg);
+      background-position: center;
+      background-size: contain;
   }
 
   .main-header h2 {
@@ -144,5 +146,61 @@
 
   .main-menu_link:hover {
       color: #FFF;
-      background-color: var(--background);
+      background-color: var(--orange);
+  }
+
+
+  /****** hero ******/
+
+  .hero .container {
+      justify-content: space-around;
+      align-items: center;
+      height: 96rem;
+  }
+  
+  .hero {
+      background-image: url(../img/slider1.jpg);
+      background-size: cover;
+      background-position: center;
+  }  
+  
+  .arrow-circle {
+      max-width: 100%;
+      width: 5rem;
+      height: 5rem;
+  }
+
+  .hero_textContent {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-left: 6.6rem;
+      margin-right: 6.6rem;
+      text-align: center;
+  }
+
+  .hero-paragraphe {
+      height: 11.2rem;
+      width: 105rem;
+      font-family: montserra, sans-serif;
+      font-size: 3.2rem;
+      font-weight: 400;
+      color: var(--primary);
+      margin-bottom: 23rem;
+  }
+
+  .hero-title {
+      margin-bottom: 5rem;
+      font-family: raleway, sans-serif;
+      font-size: 6.4rem;
+      font-weight: 700;
+      color: var(--orange);
+  }
+
+  .hero .progress-bar {
+      background-color: var(--orange);
+      background-size: 1rem;
+      background-repeat: repeat-8;
+      height: 1rem;
+      width: 15rem;
   }
