@@ -4,8 +4,8 @@
     font-style: normal;
     font-weight: 400;
     src: local(''),
-         url('../fonts/montserrat-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/montserrat-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../fonts/montserra/montserrat-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserra/montserrat-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
   
   /* montserrat-500 - latin */
@@ -14,8 +14,8 @@
     font-style: normal;
     font-weight: 500;
     src: local(''),
-         url('../fonts/montserrat-v15-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/montserrat-v15-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../fonts/montserra/montserrat-v15-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserra/montserrat-v15-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
   
   /* montserrat-600 - latin */
@@ -24,8 +24,8 @@
     font-style: normal;
     font-weight: 600;
     src: local(''),
-         url('../fonts/montserrat-v15-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/montserrat-v15-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('../fonts/montserra/montserrat-v15-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserra/montserrat-v15-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
   
   /* montserrat-700 - latin */
@@ -34,17 +34,115 @@
     font-style: normal;
     font-weight: 700;
     src: local(''),
-         url('../fonts/montserrat-v15-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserra/montserrat-v15-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
          url('../fonts/montserrat-v15-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
+
+  /* raleway-regular - latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/raleway/raleway-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/raleway/raleway-v19-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* raleway-600 - latin */
+  @font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+         url('../fonts/raleway/raleway-v19-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/raleway/raleway-v19-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  /* raleway-700 - latin */
+  @font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/raleway/raleway-v19-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/raleway/raleway-v19-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
   
 
   :root {
       --primary: #333;
       --grey: #707070;
+      --background: #F16822;
   }
 
   body {
       color: var(--primary);
       background-color: #fff;
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+  .container {
+      display: flex;
+      max-width: 128rem;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  /*****  header  *****/
+  .main-header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3.5rem;
+      margin-bottom: 3.5rem;
+  }
+
+  .logo-title {
+      display: flex;
+      color: var(--grey);
+  }
+
+  .logo {
+      width: 7rem;
+      height: 4.9rem;
+      background-image: url(../img/LOGO.svg);;
+  }
+
+  .main-header h2 {
+    margin-left: 1.8rem;
+    font-family: raleway, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+  .main-header ul {
+      display: flex;
+      font-size: 1.4rem;
+      font-family: montserra, sans-serif;
+  }
+
+  .main-menu_item:not(:first-of-type) {
+    margin-left: 4.1rem;
+  }
+
+  .main-header h2 span {
+      font-family: montserra, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+  }
+
+  .main-menu_link {
+      display: block;
+      padding: 1em;
+      text-transform:uppercase;
+      color: var(--primary);
+  }
+
+  .main-menu_link:hover {
+      color: #FFF;
+      background-color: var(--background);
   }
