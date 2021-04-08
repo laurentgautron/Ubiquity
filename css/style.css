@@ -74,11 +74,12 @@
       --primary: #333;
       --grey: #707070;
       --orange: #F16822;
+      --posts-section: #F9F9F9;
   }
 
   body {
       color: var(--primary);
-      background-color: #fff;
+      background-color: #F9F9F9;
   }
 
   a {
@@ -112,6 +113,11 @@ h2,
 h3,
 p {
   text-align: center;
+}
+
+p {
+  margin-left: auto;
+  margin-right: auto;
 }
 
   /*****  header  *****/
@@ -311,10 +317,81 @@ ul.progress-bar {
   max-width: 104.7rem;
   padding-left: 1em;
   padding-right: 1em;
-  margin-left: auto;
-  margin-right: auto;
   font-family: montserra, sans-serif;
   font-size: 2rem;
   font-weight: 400;
   color: #FFF;
 }
+
+/****** posts ********/
+
+.posts .container {
+  flex-direction: column;
+
+}
+
+.posts h2 {
+  font-family: raleway, sans-serif;
+  font-size: 4.8rem;
+  font-weight: 700;
+  padding-top: 17rem;
+  margin-bottom: 1.2rem;
+}
+
+.menu-posts {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blog {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.post-link {
+  display: block;
+  background-color: #FFF;
+  padding: 2.5rem 2.5rem 4rem 2.5rem;
+  width: 30rem;
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+.post-link p {
+  margin-bottom: 4rem;
+}
+
+.post-link:visited {
+  color: inherit
+}
+
+.post-link:hover,
+.post-link:focus {
+  background-color: #FFE8E87D;
+}
+
+.post-link img {
+  margin-bottom: 7.4rem;
+  width: 35rem;
+  border: 1px solid var(--grey);
+}
+
+.post-link h3 {
+  color: var(--orange);
+  margin-bottom: 2.7rem;
+}
+
+.posts .progress-bar {
+  margin-bottom: 3.2rem;
+}
+
+.text-intro {
+  margin-bottom: 11.5rem;
+  font-family: montserra, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  max-width: 104.8rem;
+}
+
