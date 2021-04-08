@@ -79,7 +79,6 @@
   body {
       color: var(--primary);
       background-color: #fff;
-      text-align: center;
   }
 
   a {
@@ -91,21 +90,28 @@
       max-width: 128rem;
       margin-left: auto;
       margin-right: auto;
+      outline: 1px solid red;
   }
 
   ul.progress-bar {
     display: flex;
-    width: 15rem;
     height: 1rem;
     margin-left: auto;
     margin-right: auto;
 }
 
 ul.progress-bar li {
-  background-color: var(--primary);
+  background-color: red;
   background-size: 1rem 1rem;
   margin-right: 1rem;
   width: 1rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-align: center;
 }
 
   /*****  header  *****/
@@ -182,9 +188,9 @@ ul.progress-bar li {
   }  
   
   .arrow-circle {
+      display: block;
       max-width: 100%;
       width: 5rem;
-      height: 5rem;
   }
 
   .hero_textContent {
@@ -212,11 +218,17 @@ ul.progress-bar li {
       color: var(--orange);
   }
 
+  .hero ul.progress-bar {
+    width: 15rem;
+  }
+
 /******* services *******/
 
 .services .container {
+    padding-top: 17rem;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 17rem;
 }
 
 .articles-container {
@@ -256,4 +268,53 @@ ul.progress-bar li {
     flex-direction: column;
     align-items: center;
     max-width: 31.7rem;
+}
+
+ul.progress-bar {
+  width: 2.5rem;
+}
+
+/******* whatis *********/
+
+.whatis {
+  background-image: url(../img/bokehback.jpg);
+  background-position: center;
+  background-size: contain;
+}
+
+.whatis .container {
+  padding-top: 10rem;
+  min-height: 91.3rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.whatis img {
+  justify-self: flex-end;
+  align-self: center;
+  max-width: 104.7rem;
+}
+
+.whatis-textContent h2{
+  font-family: raleway, sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 1.2rem;
+}
+
+.whatis ul {
+  margin-bottom: 3.2rem;
+}
+
+.whatis-textContent p {
+  max-width: 104.7rem;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: montserra, sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #FFF;
 }
