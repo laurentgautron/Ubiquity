@@ -400,7 +400,6 @@ p {
   font-weight: 400;
   max-width: 104.8rem;
 }
-
 /*********** fun facts *************/
 
 .funFacts {
@@ -434,8 +433,8 @@ p {
 }
 
 ul.menu-numeral {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   margin-bottom: 20.3rem;
 }
 
