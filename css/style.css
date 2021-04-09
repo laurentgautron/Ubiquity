@@ -124,17 +124,21 @@
     }
   }
 
-  .progress-bar {
-    max-width: 15rem;
+  .square {
+    width: 100%;
     display: flex;
     margin-left: auto;
     margin-right: auto;
 }
 
-.progress-bar a {
+.square a {
   width: 1rem;
   height: 1rem;
   margin-right: 1rem;
+}
+
+.double {
+  max-width: 3rem;
 }
 
 h1,
@@ -222,7 +226,7 @@ p {
   .hero .container {
       justify-content: space-around;
       align-items: center;
-      min-height: 96rem;
+      margin-bottom: 23rem;
   }  
   
   .arrow-circle {
@@ -257,11 +261,15 @@ p {
       color: var(--orange);
   }
 
-  .hero .progress-bar a {
+  .hero .square {
+    max-width: 15rem;
+  }
+
+  .hero .square a {
     background-color: var(--primary);
   }
   
-  .hero .progress-bar a:nth-child(2) {
+  .hero .square a:nth-child(2) {
     background-color: var(--orange);
   }
 
@@ -276,9 +284,10 @@ p {
 .articles-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 2rem;
 }
 
-@media screen and (min-width: 36em) and (min-width: 48em) {
+@media screen and (min-width: 62em) {
   .articles-container {
     grid-template-columns: repeat(4, 1fr);
 }
@@ -318,11 +327,16 @@ p {
     margin-right: 0.2rem;
 }
 
-.services .progress-bar a {
+.services .square {
+  margin-bottom: 3.2rem;
+  max-width: 3rem;
+}
+
+.services .square a {
   background-color: var(--orange);
 }
 
-.services .progress-bar a:last-child {
+.services .square a:last-child {
   background-color: var(--primary);
 }
 
@@ -359,25 +373,30 @@ p {
 }
 
 .whatis-textContent p {
+  width: 100%;
   max-width: 104.7rem;
-  padding-left: 1em;
-  padding-right: 1em;
   font-family: Montserrat, sans-serif;
   font-size: 2rem;
   font-weight: 400;
   color: #FFF;
 }
 
-.whatis .progress-bar a {
+.whatis .square {
+  margin-bottom: 3.2rem;
+}
+
+.whatis .square a {
   background-color: var(--orange);
 }
 
-.whatis .progress-bar a:last-child {
+.whatis .square a:last-child {
   background-color: #FFF;
 }
 
-.whatis .progress-bar {
+.whatis .square {
   padding-bottom: 3.2rem;
+  max-width: 3rem;
+
 }
 
 /****** posts ********/
@@ -403,7 +422,7 @@ p {
   .menu-posts {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+};
 
 .blog {
   margin-left: 2rem;
@@ -414,6 +433,7 @@ p {
 
 .post-link {
   display: block;
+  color: var(--primary);
   background-color: #FFF;
   padding: 2.5rem 2.5rem 4rem 2.5rem;
   width: 100%;
@@ -445,7 +465,8 @@ p {
   margin-bottom: 2.7rem;
 }
 
-.posts .progress-bar {
+.posts .square {
+  max-width: 3rem;
   margin-bottom: 3.2rem;
 }
 
@@ -457,11 +478,11 @@ p {
   max-width: 104.8rem;
 }
 
-.posts .progress-bar a {
+.posts .square a {
   background-color: var(--orange);
 }
 
-.posts .progress-bar a:last-child {
+.posts .square a:last-child {
   background-color: var(--primary);
 }
 /*********** fun facts *************/
@@ -514,11 +535,16 @@ ul.menu-numeral {
   color: var(--orange);
 }
 
-.funFacts .progress-bar a {
+.funFacts .square {
+  max-width: 3rem;
+  margin-bottom: 5rem;
+}
+
+.funFacts .square a {
   background-color: var(--orange);
 }
 
-.funFacts .progress-bar a:last-child {
+.funFacts .square a:last-child {
   background-color: var(--primary);
 }
 
@@ -556,15 +582,16 @@ ul.menu-numeral {
   border-radius: 50%;
 }
 
-.portrait .progress-bar {
+.portrait .square {
   padding-bottom: 8rem;
+  max-width: 15rem;
 }
 
-.portrait .progress-bar a {
+.portrait .square a {
   background-color: var(--primary);
 }
 
-.portrait .progress-bar a:nth-child(2) {
+.portrait .square a:nth-child(2) {
   background-color: #EEE;
 }
 
@@ -603,9 +630,9 @@ footer h3 {
   text-align: left;
 }
 
-.menu-footer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+ul.menu-footer {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menu-footer-item {
@@ -613,14 +640,18 @@ footer h3 {
   margin-right: 1.5rem;
 }
 
-@media  screen and (min-width: 36em) {
+@media  screen and (min-width:48em) {
   .menu-footer {
-    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.footer-end {
-  display: flex;
+@media screen and (min-width: 62em) {
+  .menu-footer {
+    grid-template-columns: repeat(4, 1fr);
+
+  }
 }
 
 .footer-menu-posts li::before,
@@ -701,6 +732,10 @@ ul.footer-menu-tags a {
 
 
 /******** footer-end *********/
+
+.footer-end {
+  display: flex;
+}
 
 .footer-end {
   display: flex;
