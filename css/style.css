@@ -560,7 +560,7 @@ ul.menu-numeral {
   padding-bottom: 8rem;
 }
 
-.portrait.progress-bar a {
+.portrait .progress-bar a {
   background-color: var(--primary);
 }
 
