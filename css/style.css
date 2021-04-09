@@ -91,34 +91,50 @@
       padding-top: 17rem;
       display: flex;
       justify-content: center;
+      width: 100%;
       max-width: 128rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
       margin-left: auto;
       margin-right: auto;
       outline: 1px solid red;
   }
 
-  .progress-bar ul {
-    width: 15rem;
+  @media screen and (min-width: 36em) {
+    .container {
+      max-width: 50.4rem;
+    }
+  }
+  
+  @media screen and (min-width: 48em) {
+    .container {
+      max-width: 70.4rem;
+    }
+  }
+  
+  @media screen and (min-width: 62em) {
+    .container {
+      max-width: 92.8rem;
+    }
+  }
+  
+  @media screen and (min-width: 75em) {
+    .container {
+      max-width: 128rem;
+    }
+  }
+
+  .progress-bar {
+    max-width: 15rem;
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    height: 1rem;
-}
-
-.progress-bar li {
-  list-style-type: none;
-  margin-right: 1rem;
-}
-
-.progress-bar button {
-  display: block;
-  width: 1rem !important;
-  height: 1rem;
 }
 
 .progress-bar a {
-  width: 100%;
-  max-width: 3rem;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
 }
 
 h1,
@@ -157,14 +173,16 @@ p {
   }
 
   .main-header h2 {
+    text-align: left;
     margin-left: 1.8rem;
     font-family: raleway, sans-serif;
     font-size: 2rem;
     font-weight: 700;
 }
 
-  .main-header ul {
+  .main-menu {
     display: flex;
+    justify-content: flex-end;
     font-size: 1.4rem;
     font-family: Montserrat, sans-serif;
   }
@@ -204,7 +222,7 @@ p {
   .hero .container {
       justify-content: space-around;
       align-items: center;
-      height: 96rem;
+      min-height: 96rem;
   }  
   
   .arrow-circle {
@@ -223,7 +241,8 @@ p {
   }
 
   .hero-paragraphe {
-      width: 105rem;
+      width: 100%;
+      max-width: 105rem;
       font-family: Montserrat, sans-serif;
       font-size: 3.2rem;
       font-weight: 400;
@@ -238,8 +257,12 @@ p {
       color: var(--orange);
   }
 
-  .hero ul.progress-bar {
-    width: 15rem;
+  .hero .progress-bar a {
+    background-color: var(--primary);
+  }
+  
+  .hero .progress-bar a:nth-child(2) {
+    background-color: var(--orange);
   }
 
 /******* services *******/
@@ -252,7 +275,13 @@ p {
 
 .articles-container {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (min-width: 36em) and (min-width: 48em) {
+  .articles-container {
     grid-template-columns: repeat(4, 1fr);
+}
 }
 
 .services-title {
@@ -263,7 +292,8 @@ p {
 }
 
 .services-text {
-    width: 104.8rem;
+    max-width: 104.8rem;
+    width: 100%;
     margin-bottom: 4.9rem;
 }
 
@@ -286,6 +316,14 @@ p {
     max-width: 31.7rem;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
+}
+
+.services .progress-bar a {
+  background-color: var(--orange);
+}
+
+.services .progress-bar a:last-child {
+  background-color: var(--primary);
 }
 
 /******* whatis *********/
@@ -330,6 +368,18 @@ p {
   color: #FFF;
 }
 
+.whatis .progress-bar a {
+  background-color: var(--orange);
+}
+
+.whatis .progress-bar a:last-child {
+  background-color: #FFF;
+}
+
+.whatis .progress-bar {
+  padding-bottom: 3.2rem;
+}
+
 /****** posts ********/
 
 .posts .container {
@@ -346,7 +396,13 @@ p {
 
 .menu-posts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (min-width: 48em) {
+  .menu-posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .blog {
@@ -401,6 +457,14 @@ p {
   max-width: 104.8rem;
 }
 
+.posts .progress-bar a {
+  background-color: var(--orange);
+}
+
+.posts .progress-bar a:last-child {
+  background-color: var(--primary);
+}
+
 /*********** fun facts *************/
 
 .funFacts {
@@ -420,8 +484,6 @@ p {
   opacity: 0.1;
 }
 
-
-
 .funFacts h2 {
   font-family: raleway, sans-serif;
   font-size: 4.8rem;
@@ -429,14 +491,16 @@ p {
   margin-bottom: 2.4rem;
 }
 
-.funFacts .progress-bar {
-  margin-bottom: 5rem;
+ul.menu-numeral {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 20.3rem;
 }
 
-ul.menu-numeral {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20.3rem;
+@media screen and (min-width: 48em) {
+  ul.menu-numeral {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .numeral-item {
@@ -451,6 +515,14 @@ ul.menu-numeral {
   color: var(--orange);
 }
 
+.funFacts .progress-bar a {
+  background-color: var(--orange);
+}
+
+.funFacts .progress-bar a:last-child {
+  background-color: var(--primary);
+}
+
 
 /******** portrait ********/
 
@@ -461,9 +533,24 @@ ul.menu-numeral {
 }
 
 .portrait .container {
+  flex-direction: column;
   align-items: center;
   color: #FFF;
   margin-bottom: 14.1rem;
+}
+
+@media  screen and (min-width: 36em) and (min-width: 48em) {
+  .portrait .container {
+     flex-direction: initial;
+  }
+
+  .text-presentation p {
+    text-align: left;
+  }
+
+  .text-presentation {
+    padding-left: 5rem;
+  }
 }
 
 .portrait img {
@@ -474,11 +561,19 @@ ul.menu-numeral {
   padding-bottom: 8rem;
 }
 
+.portrait.progress-bar a {
+  background-color: var(--primary);
+}
+
+.portrait .progress-bar a:nth-child(2) {
+  background-color: #EEE;
+}
+
 .text-presentation h1 {
   font-family: raleway, sans-serif;
   font-size: 4.8rem;
   font-weight: 700;
-  text-align: left;
+  text-align: center;
 }
 
 .text-presentation p {
@@ -486,11 +581,7 @@ ul.menu-numeral {
   font-size: 2.4rem;
   font-weight: 400;
   max-width: 101rem;
-  text-align: left;
-}
-
-.text-presentation {
-  padding-left: 5rem;
+  text-align: justify;
 }
 
 /******** footer ********/
@@ -513,14 +604,20 @@ footer h3 {
   text-align: left;
 }
 
-/*.menu-footer {
-  display: flex;
-  justify-content: space-between;
-}*/
-
 .menu-footer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.menu-footer-item {
+  margin-bottom: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+@media  screen and (min-width: 36em) {
+  .menu-footer {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .footer-end {
