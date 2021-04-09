@@ -456,8 +456,6 @@ p {
   font-weight: 400;
   max-width: 104.8rem;
 }
-<<<<<<< HEAD
-=======
 
 .posts .progress-bar a {
   background-color: var(--orange);
@@ -466,8 +464,6 @@ p {
 .posts .progress-bar a:last-child {
   background-color: var(--primary);
 }
-
->>>>>>> responsive
 /*********** fun facts *************/
 
 .funFacts {
@@ -496,11 +492,7 @@ p {
 
 ul.menu-numeral {
   display: grid;
-<<<<<<< HEAD
-  grid-template-columns: repeat(6, 1fr);
-=======
   grid-template-columns: repeat(3, 1fr);
->>>>>>> responsive
   margin-bottom: 20.3rem;
 }
 
