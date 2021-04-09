@@ -80,6 +80,7 @@
   body {
       color: var(--primary);
       background-color: #F9F9F9;
+      line-height: ;
   }
 
   a {
@@ -90,24 +91,31 @@
   .container {
       padding-top: 17rem;
       display: flex;
+      justify-content: center;
       max-width: 128rem;
       margin-left: auto;
       margin-right: auto;
       outline: 1px solid red;
   }
 
-  ul.progress-bar {
+  .progress-bar ul {
+    width: 15rem;
     display: flex;
-    height: 1rem;
     margin-left: auto;
     margin-right: auto;
+    height: 1rem;
 }
 
-ul.progress-bar li {
-  background-color: red;
+.progress-bar li {
+  list-style-type: none;
   background-size: 1rem 1rem;
   margin-right: 1rem;
   width: 1rem;
+}
+
+.progress-bar a {
+  width: 100;
+  background-color: red;
 }
 
 h1,
@@ -276,10 +284,6 @@ p {
     margin-right: 0.2rem;
 }
 
-ul.progress-bar {
-  width: 2.5rem;
-}
-
 /******* whatis *********/
 
 .whatis {
@@ -337,9 +341,11 @@ ul.progress-bar {
 }
 
 .menu-posts {
-  display: flex;
+  /*display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap;*/
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .blog {
@@ -506,9 +512,14 @@ footer h3 {
   text-align: left;
 }
 
-.menu-footer {
+/*.menu-footer {
   display: flex;
   justify-content: space-between;
+}*/
+
+.menu-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .footer-end {
