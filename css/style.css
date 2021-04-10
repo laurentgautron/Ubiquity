@@ -343,9 +343,10 @@ p {
 /******* whatis *********/
 
 .whatis {
-  background-image: url(../img/bokehback.jpg);
-  background-position: center;
-  background-size: contain;
+  background-image: url(../img/browser-mockup.png), url(../img/bokehback.jpg);
+  background-position: bottom, center;
+  background-size: 70%, cover;
+  background-repeat: no-repeat, repeat;
 }
 
 .whatis .container {
@@ -403,6 +404,7 @@ p {
 
 .posts .container {
   flex-direction: column;
+  align-items: center;
 
 }
 
@@ -422,7 +424,14 @@ p {
   .menu-posts {
     grid-template-columns: repeat(3, 1fr);
   }
-};
+}
+
+@media screen and (min-width: 75em) {
+  .menu-posts {
+    row-gap: 10rem;
+    column-gap: 4rem;
+  }
+}
 
 .blog {
   margin-left: 2rem;
@@ -520,6 +529,12 @@ ul.menu-numeral {
 @media screen and (min-width: 48em) {
   ul.menu-numeral {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 75em) {
+    ul.menu-numeral {
+      grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -760,4 +775,8 @@ ul.footer-menu-tags a {
   max-width: 13rem;
   display: flex;
   justify-content: space-between;
+}
+
+.networks-link svg path:hover {
+  fill: var(--posts-section);
 }
