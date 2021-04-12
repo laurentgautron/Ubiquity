@@ -264,7 +264,7 @@ p {
 
   @media (min-resolution: 144dpi) {
     .hero {
-      background-image: url(../img/writing2x.jpg);
+      background-image: url(../img/writing@2x.jpg);
     }
   }
   
@@ -395,7 +395,7 @@ p {
 }
 
 @media (min-resolution: 144dpi) {
-	.hero {
+	.whatis {
 		background-image: url(../img/browser-mockup@2x.jpg), url(../img/bokehback@2x.jpg);
 	}
 }
@@ -624,7 +624,7 @@ ul.menu-numeral {
 }
 
 @media (min-resolution: 144dpi) {
-	.hero {
+	.portrait {
 		background-image: url(../img/rect@2x.jpg);
 	}
 }
