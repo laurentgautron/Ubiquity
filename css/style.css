@@ -82,6 +82,10 @@
       background-color: #F9F9F9;
   }
 
+  :focus {
+    border: 2px solid red;
+  }
+
   a {
       display: inline-block;
       text-decoration: none;
@@ -97,7 +101,6 @@
       padding-right: 1.5rem;
       margin-left: auto;
       margin-right: auto;
-      outline: 1px solid red;
   }
 
   @media screen and (min-width: 36em) {
@@ -154,12 +157,15 @@ p {
 }
 
   /*****  header  *****/
+
+
   .main-header .container {
+      position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-top: 3.5rem;
-      margin-bottom: 3.5rem;
+      padding-bottom: 3.5rem;
       padding-top: 0;
   }
 
@@ -185,14 +191,12 @@ p {
 }
 
   .main-menu {
-    display: flex;
-    justify-content: flex-end;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
     font-size: 1.4rem;
     font-family: Montserrat, sans-serif;
-  }
-
-  .main-menu_item:not(:first-of-type) {
-    margin-left: 4.1rem;
   }
 
   .main-header h2 span {
@@ -202,6 +206,7 @@ p {
   }
 
   .main-menu_link {
+    background-color: #F9F9F9;
     display: block;
     padding: 1em;
     text-transform:uppercase;
@@ -213,6 +218,40 @@ p {
     background-color: var(--orange);
   }
 
+[hidden] {
+  display: none;
+}
+
+.main-menu {
+  position: absolute;
+  top:100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.toogle-menu {
+  border: 0;
+  color: var(--primary);
+  background-color: transparent;
+}
+
+  @media screen and (min-width: 62em) {
+    .toogle-menu {
+      display: none;
+    }
+
+    .main-menu {
+      display: flex;
+      position: static;
+      background-color: #F9F9F9;
+    }
+
+    .main-menu_item:not(:first-of-type) {
+      margin-left: 4.1rem;
+    }
+  }
+
 
   /****** hero ******/
 
@@ -221,6 +260,12 @@ p {
     background-size: cover;
     background-position: center;
     padding-bottom: 8rem;
+  }
+
+  @media (min-resolution: 144dpi) {
+    .hero {
+      background-image: url(../img/writing2x.jpg);
+    }
   }
   
   .hero .container {
@@ -343,10 +388,16 @@ p {
 /******* whatis *********/
 
 .whatis {
-  background-image: url(../img/browser-mockup.png), url(../img/bokehback.jpg);
+  background-image: url(../img/browser-mockup.jpg), url(../img/bokehback.jpg);
   background-position: bottom, center;
   background-size: 70%, cover;
   background-repeat: no-repeat, repeat;
+}
+
+@media (min-resolution: 144dpi) {
+	.hero {
+		background-image: url(../img/browser-mockup@2x.jpg), url(../img/bokehback@2x.jpg);
+	}
 }
 
 .whatis .container {
@@ -567,9 +618,15 @@ ul.menu-numeral {
 /******** portrait ********/
 
 .portrait {
-  background-image: url(../img/rect.png);
+  background-image: url(../img/rect.jpg);
   background-position: center;
   background-size: cover;
+}
+
+@media (min-resolution: 144dpi) {
+	.hero {
+		background-image: url(../img/rect@2x.jpg);
+	}
 }
 
 .portrait .container {
@@ -732,7 +789,6 @@ ul.footer-menu-tags a {
   display: block;
   width: 3rem;
   margin-right: 1.5rem;
-  border: 1px solid red;
 }
 
 .footer-menu-posts a:hover,
