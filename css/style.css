@@ -211,6 +211,7 @@ p {
 }
 
 .main-menu {
+  text-align: center;
   position: absolute;
   left: 0;
   right: 0;
@@ -243,19 +244,52 @@ p {
   display: none;
 }
 
-.main-menu {
-  position: absolute;
-  top:100%;
-  left: 0;
-  right: 0;
-  text-align: center;
+.toogle-menu {
+  height: 5rem;
+  width: 6rem;
+  position: relative;
+  background-color: transparent;
+  border: 1px solid red;
 }
 
-.toogle-menu {
-  border: 0;
-  color: var(--primary);
-  background-color: transparent;
+.burger {
+  display: block;
+  position: relative;
 }
+
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.burger::before { top: 1.2rem;}
+.burger::after { bottom: 1.2rem;}
+
+.burger,
+.burger::before,
+.burger::after {
+  width: 4.5rem;
+  height: 0.3rem;
+  background-color: var(--grey);
+  border-radius: 0.3rem;
+  transition: transform 1s ease-in-out;
+}
+
+.cross .burger {
+  transform: rotate(45deg);
+}
+
+.cross .burger::before {
+  transform: translateY(-1.2rem) rotate(90deg);
+}
+
+.cross .burger::after {
+  transform: translateY(1.2rem) rotate(-90deg);
+}
+
 
   @media screen and (min-width: 62em) {
     .toogle-menu {
@@ -739,10 +773,6 @@ ul.footer-menu-tags a {
 .footer-menu-tags a:focus {
   background-color: #CCC;
   color: #444;
-}
-
-.footer-address-item {
-  display: flex;
 }
 
 .footer-address-link {
