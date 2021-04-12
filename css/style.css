@@ -608,7 +608,7 @@ ul.menu-numeral {
   margin-bottom: 14.1rem;
 }
 
-@media  screen and (min-width: 36em) and (min-width: 48em) {
+@media  screen and (min-width: 36em) and (min-width: 62em) {
   .portrait .container {
      flex-direction: initial;
   }
