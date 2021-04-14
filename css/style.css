@@ -134,10 +134,19 @@ a {
   margin-right: auto;
 }
 
-.square a {
+.square button {
+  margin: 0 0.5rem 0 0;
+  padding: 0;
   width: 1rem;
   height: 1rem;
-  margin-right: 1rem;
+  background-color: var(--orange);
+  border: 0;
+
+}
+
+ul.square-list {
+  width: 100;
+  max-width: 20rem;
 }
 
 .double {
@@ -155,6 +164,11 @@ a {
   margin-right: 0.5rem;
   margin-left: 0.5rem;
   background-color: #000;
+}
+
+.square ul li {
+  display: inline-block;
+  list-style-type: none;
 }
 
 .double .sq:first-of-type {
@@ -177,6 +191,7 @@ p {
 
 .main-header {
   position: relative;
+  z-index: 2;
 }
 
 
@@ -249,7 +264,7 @@ p {
   width: 6rem;
   position: relative;
   background-color: transparent;
-  border: 1px solid red;
+  border: 1px solid var(--grey);
 }
 
 .burger {
@@ -275,7 +290,7 @@ p {
   height: 0.3rem;
   background-color: var(--grey);
   border-radius: 0.3rem;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .cross .burger {
@@ -365,11 +380,11 @@ p {
     max-width: 15rem;
   }
 
-  .hero .square a {
+  .hero .square button {
     background-color: var(--primary);
   }
   
-  .hero .square a:nth-child(2) {
+  .hero .square li:nth-child(2) button {
     background-color: var(--orange);
   }
 
@@ -425,6 +440,10 @@ p {
     max-width: 31.7rem;
     margin-left: 0.2rem;
     margin-right: 0.2rem;
+}
+
+.services-card p {
+  font-family: Montserrat, sans-serif;
 }
 
 
@@ -580,7 +599,7 @@ p {
 .funFacts img {
   position: absolute;
   bottom: 0;
-  right: 0;
+  top: 0;
   max-width: 100%;
   opacity: 0.1;
 }
@@ -595,7 +614,7 @@ p {
 ul.menu-numeral {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 20.3rem;
+  padding-bottom: 20.3rem;
 }
 
 @media screen and (min-width: 48em) {
@@ -665,11 +684,11 @@ ul.menu-numeral {
   max-width: 15rem;
 }
 
-.portrait .square a {
+.portrait .square button {
   background-color: var(--primary);
 }
 
-.portrait .square a:nth-child(2) {
+.portrait .square li:nth-child(2) button {
   background-color: #EEE;
 }
 
@@ -734,8 +753,11 @@ ul.menu-footer {
 
 .footer-menu-posts li::before,
 .footer-menu-comments li::before {
-  content: url(../img/angle-double-right.svg);
-  vertical-align: center;
+  content: '';
+  display: block;
+  width: 1rem;
+  height: 0.8rem;
+  background-image: url(../img/angle-double-right.svg);
   display: inline-block;
   margin-right: 1rem;
 }
