@@ -599,10 +599,15 @@ p {
 /*********** fun facts *************/
 
 .funFacts {
-  position: relative;
   background-image: url(../img/lauren-long-laptop.jpg);
   background-size: cover;
   background-position: center;
+}
+
+@media (min-resolution: 144dpi) {
+	.whatis {
+		background-image: url(../img/lauren-long-laptop@2x.jpg);
+	}
 }
 
 .overlay {
